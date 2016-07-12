@@ -6,7 +6,7 @@
 
 QT       -= gui
 
-TARGET = libResource
+TARGET = resource
 TEMPLATE = lib
 
 DEFINES += LIBRESOURCE_LIBRARY
@@ -20,3 +20,10 @@ unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+
+DESTDIR     = $$PWD/../libs
+
+MOC_DIR     = $$PWD/../build/lrc
+OBJECTS_DIR = $$PWD/../build/lrc
+RCC_DIR     = $$PWD/../build/lrc
+UI_DIR      = $$PWD/../build/lrc

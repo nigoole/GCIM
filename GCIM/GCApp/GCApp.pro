@@ -13,6 +13,28 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        $$PWD/src/mainwindow.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += $$PWD/src/mainwindow.h
+
+
+#pri fins
+include($$PWD/applog/applog.pri)
+include($$PWD/emailapi/email.pri)
+include($$PWD/myapi/myapi.pri)
+include($$PWD/network/network.pri)
+
+
+INCLUDEPATH         += $$PWD/src
+
+
+LIBS        += -L$$PWD/../libs -lresource
+
+
+
+DESTDIR     = $$PWD/../release
+
+MOC_DIR     = $$PWD/../build/app
+OBJECTS_DIR = $$PWD/../build/app
+RCC_DIR     = $$PWD/../build/app
+UI_DIR      = $$PWD/../build/app
